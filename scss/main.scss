@@ -15,12 +15,13 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3 {
     margin: 0;
     font-weight: 400;
 
     &.citation {
         margin: 0.8rem 0.1rem;
+        color: rgb(122, 3, 190);
     }
 
     &.lg-heading {
@@ -83,3 +84,5 @@ main {
         }
     }
 }
+
+@import 'mobile'; // Se importa al final para que sus efectos tengan precedencia

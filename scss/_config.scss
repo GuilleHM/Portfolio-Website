@@ -12,8 +12,11 @@ $background-opacity: 0.9;
 @mixin background {
     @if $show-home-image {
         &#bg-img {
-            background: $home-image;
+            background: $home-image no-repeat center center fixed;
             background-attachment: fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
             background-size: cover;
             
             // En caso de querer incluir una capa con el color primario sobre la imagen de fondo. Opacidad modificable
@@ -28,5 +31,31 @@ $background-opacity: 0.9;
             //     background: rgba($primary-color, 0);
             // }
         }
+    }
+}
+
+// Media Query Mixin
+
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }
