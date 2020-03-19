@@ -33,6 +33,15 @@ h1, h2, h3, h4 {
         border-radius: 5px;
         padding: 0.1rem 1rem 0.5rem 1rem;
         background: rgba(lighten($primary-color, 2), 0.5);
+        transition: 1s ease-in-out;
+        transition-delay: 0.5s;
+
+        &.no-bg {
+            padding: 0.1rem 1rem 0.5rem 0;
+            background: none;
+            @include easeOut();
+            
+        }
     }
 }
 
