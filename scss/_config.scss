@@ -6,7 +6,6 @@ $background-opacity: 0.9;
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
-    
 }
 
 @mixin background {
@@ -28,13 +27,29 @@ $background-opacity: 0.9;
             //     width: 100%;
             //     height: 100%;
             //     z-index: -1;
-            //     background: rgba($primary-color, 0);
+            //     background: rgba($primary-color, 0.5);
             // }
         }
     }
 }
 
+// Set Text Color
+
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
 // Media Query Mixin
+
+@mixin mediaXs {
+    @media screen and (max-width: 320px) {
+        @content;
+    }
+}
 
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
@@ -49,13 +64,27 @@ $background-opacity: 0.9;
 }
 
 @mixin mediaLg {
-    @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @media screen and (min-width: 769px) and (max-width: 1100px) {
         @content;
     }
 }
 
 @mixin mediaXl {
-    @media screen and (min-width: 1171px) {
+    @media screen and (min-width: 1101px) {
+        @content;
+    }
+}
+
+// Horizontally oriented Smartphones
+@mixin mediaSm_Hori {
+    @media screen and (max-width: 768px) and (orientation:landscape) {
+        @content;
+    }
+}
+
+// Horizontally oriented Large Smartphones
+@mixin mediaSm_Hori_LS {
+    @media screen and (min-width: 769px) and (max-width: 825px) and (max-height: 425px) and (orientation:landscape) {
         @content;
     }
 }

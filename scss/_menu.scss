@@ -3,9 +3,11 @@
 .menu-btn {
     position: absolute;
     z-index: 3;
-    top: 35px;
+    top: 25px;
     right: 35px;
     cursor: pointer;
+    border: solid 2px rgb(122, 3, 190);
+    border-radius: 5px;
     @include easeOut;
 
     &:hover .btn-line {
@@ -16,7 +18,8 @@
     .btn-line {
         width: 28px;
         height: 3px;
-        margin: 0 0 5px 0;
+        margin: 5px;
+        // margin: 0 0 5px 0;
         background: #fff;
         border-radius: 5px;
         @include easeOut;

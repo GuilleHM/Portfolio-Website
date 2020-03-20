@@ -1,11 +1,20 @@
 // Widescreens
 @include mediaXl {
+    // .btn-line {
+    //     width: 38px;
+    //     height: 5px;
+    //     margin: 0 0 7px 0;
+    //     background: #fff;
+    //     border-radius: 5px;
+    //     @include easeOut;
+    // }
 
 }
 // Desktops & laptops
 @include mediaLg {
 
 }
+
 // Tablets & small laptops
 @include mediaMd {
     main {
@@ -50,12 +59,140 @@
         }
     }
 
+    .about-info {
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+    }
 }
 
 // Smartphones
 @include mediaSm {
-    // main#home {
-    //     margin-top: 10vh;
-    // }
+    .menu-btn {
+        top: 20px;
+        right: 20px;
+    }
 
+    .citation {
+        background: #fff;
+        opacity: 0.7;
+        padding: 0 0.5rem 0.3rem 0.5rem;
+        margin-right: 18%;
+        margin-left: 18%;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+    
+    main {
+        transition-delay: 0.8s;
+
+        .sm-heading {
+            transition: none;
+
+            &.no-bg{
+                transition: none;
+            }
+        }
+
+        &.hide {
+            transition: none;
+            visibility: hidden; 
+        }
+    }
+}
+
+// Small smartphones
+@include mediaXs {
+    main {
+        .lg-heading {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .sm-heading {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+// Horizontally oriented Smartphones
+@include mediaSm_Hori {
+        .menu-btn {
+            top: 35px;
+            right: 25px;
+        }
+
+    main {
+        transition-delay: 0.8s;
+
+        .sm-heading {
+            transition: none;
+
+            &.no-bg{
+                transition: none;
+            }
+        }
+
+        &.hide {
+            transition: none;
+            visibility: hidden; 
+        }
+
+        &#home h1 {
+            margin-top: 10vh;
+        }
+    }
+
+    .citation {
+        background: #fff;
+        opacity: 0.7;
+        padding: 0 0.5rem 0.3rem 0.5rem;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
+
+    ul.menu-nav,
+    div.menu-branding {
+        float: none;
+        width: 100%;
+        min-height: 0;
+
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+    }
+
+    .menu-nav {
+        height: 50vh;
+        transform: translate3d(-100%,0,0);
+        // font-size: 10px;
+    }
+
+    .menu-branding {
+        height: 50vh;
+        transform: translate3d(100%,0,0);
+
+        .portrait {
+            background: url('../imgs/portrait_small.jpg');
+            width: 150px;
+            height: 150px;
+        }
+    }
+}
+
+// Horizontally oriented Large Smartphones
+@include mediaSm_Hori_LS {
+    main#home h1 {
+        margin-top: 5vh;
+    }
+    .citation {
+        background: #fff;
+        opacity: 0.7;
+        padding: 0 0.5rem 0.3rem 0.5rem;
+        border-radius: 5px;
+        font-size: 1.2rem;
+    }
 }

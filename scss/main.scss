@@ -8,7 +8,7 @@
 body {
     @include background;
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -22,6 +22,7 @@ h1, h2, h3 {
     &.citation {
         margin: 0.8rem 0.1rem;
         color: rgb(122, 3, 190);
+        font-weight: bold;
     }
 
     &.lg-heading {
@@ -30,10 +31,10 @@ h1, h2, h3 {
 
     &.sm-heading {
         margin-bottom: 1.3rem;
-        margin-right: 30%;
+        margin-right: 38%;
         border-radius: 5px;
         padding: 0.1rem 1rem 0.5rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
+        background: rgba(lighten($primary-color, 5), 0.5);
         transition: 1s ease-in-out;
         transition-delay: 0.5s;
 
@@ -64,7 +65,7 @@ header {
 
 main {
     padding: 3rem;
-    height: 100%;
+    min-height: calc(100vh - 60px); // 60px es la altura del pie de página
 
     .icons {
         a {
@@ -83,6 +84,53 @@ main {
             margin-top: 15vh;
         }
     }
+}
+
+.about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 
+    'bioimage bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3,1fr);
+}
+
+.bio-image {
+    grid-area: bioimage;
+    margin:auto;
+    border-radius: 50%;
+    border: $secondary-color 3px solid;
+}
+
+.bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+}
+
+.job-1 {
+    grid-area: job1;
+}
+
+.job-2 {
+    grid-area: job2;
+}
+
+.job-3 {
+    grid-area: job3;
+}
+
+.job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 2px solid;
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color,10);
+    color: set-text-color($primary-color);
+    height: 60px;
 }
 
 @import 'mobile'; // Se importa al final para que sus efectos tengan precedencia
