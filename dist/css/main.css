@@ -224,6 +224,27 @@ main {
       border: 6px solid #5a028c;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    border-radius: 10px;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #333;
+      color: #fff; }
+    .boxes div a:hover {
+      transition: all 0.5s ease-out;
+      color: #7a03be; }
+
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
