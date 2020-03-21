@@ -103,6 +103,31 @@
             visibility: hidden; 
         }
     }
+
+    .pre-footer {
+        @include easeOut;
+        transition-delay: 0.8s;
+        &.hide {
+            transition: none;
+            visibility: hidden; 
+        }    
+    }
+
+    footer {
+        @include easeOut;
+        transition-delay: 0.8s;
+        p {
+            font-size: 0.8rem;
+        }
+        &.hide {
+            transition: none;
+            visibility: hidden; 
+        }
+    }
+    .bio-image {
+        width: 90%;
+        height: auto;
+    }
 }
 
 // Small smartphones
@@ -181,13 +206,49 @@
             height: 150px;
         }
     }
+
+    .pre-footer {
+        @include easeOut;
+        transition-delay: 0.8s;
+        &.hide {
+            transition: none;
+            visibility: hidden; 
+        }    
+    }
+
+    footer {
+        @include easeOut;
+        transition-delay: 0.8s;
+        p {
+            font-size: 0.8rem;
+        }
+        &.hide {
+            transition: none;
+            visibility: hidden; 
+        }
+    }
 }
 
 // Horizontally oriented Large Smartphones
 @include mediaSm_Hori_LS {
-    main#home h1 {
-        margin-top: 5vh;
+    main {
+        align-items: center;
+        text-align: center;
+
+        .lg-heading {
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .sm-heading {
+            margin-right: 0;
+        }
+
+        #home h1 {
+            margin-top: 5vh;
+        }
     }
+    
     .citation {
         background: #fff;
         opacity: 0.7;
@@ -195,4 +256,28 @@
         border-radius: 5px;
         font-size: 1.2rem;
     }
+    .about-info {
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
+    }
 }
+
+// Horizontally Oriente Small SmartPhones
+@include mediaSm_Hori_SS {
+    .menu .nav-item.current > a {
+        font-size: 2rem;
+    }
+
+    footer {
+        p {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+
