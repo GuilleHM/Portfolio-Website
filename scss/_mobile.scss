@@ -9,6 +9,10 @@
     //     @include easeOut;
     // }
 
+    .posts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
 }
 // Desktops & laptops
 @include mediaLg {
@@ -68,6 +72,10 @@
         'job3';
         grid-template-columns: 1fr;
     }
+
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // Smartphones
@@ -102,6 +110,10 @@
             transition: none;
             visibility: hidden; 
         }
+
+        &#work h1 {
+            margin-top: 5vh;
+        }
     }
 
     .pre-footer {
@@ -127,6 +139,10 @@
     .bio-image {
         width: 90%;
         height: auto;
+    }
+
+    .posts {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -168,6 +184,10 @@
 
         &#home h1 {
             margin-top: 10vh;
+        }
+
+        &#work h1 {
+            margin-top: 5vh;
         }
     }
 
@@ -245,6 +265,10 @@
         }
 
         #home h1 {
+            margin-top: 5vh;
+        }
+
+        &#work h1 {
             margin-top: 5vh;
         }
     }
