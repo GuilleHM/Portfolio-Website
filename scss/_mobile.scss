@@ -287,9 +287,9 @@
     footer {
         @include easeOut;
         transition-delay: 0.8s;
-        // p {
-        //     font-size: 0.7rem;
-        // }
+        p {
+            font-size: 0.7rem;
+        }
         &.hide {
             transition: none;
             visibility: hidden; 
