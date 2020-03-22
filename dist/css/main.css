@@ -356,6 +356,8 @@ main {
     font-size: 1.2rem; }
   main {
     transition-delay: 0.8s; }
+    main .lg-heading {
+      font-size: 3.5rem; }
     main .sm-heading {
       transition: none; }
       main .sm-heading.no-bg {

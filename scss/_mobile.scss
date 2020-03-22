@@ -102,6 +102,10 @@
     main {
         transition-delay: 0.8s;
 
+        .lg-heading {
+            font-size: 3.5rem;
+        }
+
         .sm-heading {
             transition: none;
 
