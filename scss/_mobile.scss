@@ -13,6 +13,10 @@
         grid-template-columns: repeat(4, 1fr);
     }
 
+    body.second_bg_img.city {
+        background-image: url('../imgs/showcase.jpg');
+    }
+
 }
 // Desktops & laptops
 @include mediaLg {
@@ -106,10 +110,22 @@
             }
         }
 
+        .boxes {
+            div {
+                transition: none;
+            }    
+        }
+
+        .posts {
+            a {
+                transition: none;
+            }    
+        }
+
         &.hide {
             transition: none;
             visibility: hidden; 
-        }
+        }   
 
         &#work h1 {
             margin-top: 5vh;
@@ -144,6 +160,12 @@
     .posts {
         grid-template-columns: 1fr;
     }
+
+    .boxes {
+        div{
+            font-size: 1.3rem;
+        }
+    }
 }
 
 // Small smartphones
@@ -156,6 +178,10 @@
         .sm-heading {
             font-size: 1.3rem;
         }
+    }
+
+    .btn {
+        font-size: 1rem;
     }
 }
 
@@ -175,6 +201,18 @@
             &.no-bg{
                 transition: none;
             }
+        }
+
+        .boxes {
+            div {
+                transition: none;
+            }    
+        }
+
+        .posts {
+            a {
+                transition: none;
+            }    
         }
 
         &.hide {
@@ -289,6 +327,9 @@
         'job3';
         grid-template-columns: 1fr;
     }
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // Horizontally Oriente Small SmartPhones
@@ -301,6 +342,10 @@
         p {
             font-size: 0.7rem;
         }
+    }
+
+    .btn {
+        font-size: 1rem;
     }
 }
 
