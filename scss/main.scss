@@ -252,7 +252,9 @@ main {
     background: darken($primary-color,10);
     color: set-text-color($primary-color);
     height: 100px;
-    p{
+    p {
+        font-size: 0.7rem;
+        text-align: center;
         margin-left: 5px;
     }
     a {

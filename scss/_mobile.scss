@@ -144,9 +144,9 @@
     footer {
         @include easeOut;
         transition-delay: 0.8s;
-        p {
-            font-size: 0.8rem;
-        }
+        // p {
+        //     font-size: 0.8rem;
+        // }
         &.hide {
             transition: none;
             visibility: hidden; 
@@ -277,9 +277,9 @@
     footer {
         @include easeOut;
         transition-delay: 0.8s;
-        p {
-            font-size: 0.7rem;
-        }
+        // p {
+        //     font-size: 0.7rem;
+        // }
         &.hide {
             transition: none;
             visibility: hidden; 
@@ -338,11 +338,11 @@
         font-size: 2rem;
     }
 
-    footer {
-        p {
-            font-size: 0.7rem;
-        }
-    }
+    // footer {
+    //     p {
+    //         font-size: 0.7rem;
+    //     }
+    // }
 
     .btn {
         font-size: 1rem;

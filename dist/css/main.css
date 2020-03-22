@@ -293,6 +293,8 @@ main {
   color: #fff;
   height: 100px; }
   #main-footer p {
+    font-size: 0.7rem;
+    text-align: center;
     margin-left: 5px; }
   #main-footer a {
     margin-right: 5px;
@@ -376,8 +378,6 @@ main {
   footer {
     transition: all 0.5s ease-out;
     transition-delay: 0.8s; }
-    footer p {
-      font-size: 0.8rem; }
     footer.hide {
       transition: none;
       visibility: hidden; }
@@ -452,8 +452,6 @@ main {
   footer {
     transition: all 0.5s ease-out;
     transition-delay: 0.8s; }
-    footer p {
-      font-size: 0.8rem; }
     footer.hide {
       transition: none;
       visibility: hidden; } }
@@ -486,7 +484,5 @@ main {
 @media screen and (max-width: 640px) and (max-height: 360px) and (orientation: landscape) {
   .menu .nav-item.current > a {
     font-size: 2rem; }
-  footer p {
-    font-size: 0.7rem; }
   .btn, .btn-dark, .btn-light {
     font-size: 1rem; } }
