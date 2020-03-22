@@ -278,7 +278,7 @@
         @include easeOut;
         transition-delay: 0.8s;
         p {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
         &.hide {
             transition: none;
@@ -332,7 +332,7 @@
     }
 }
 
-// Horizontally Oriente Small SmartPhones
+// Horizontally Oriented Small SmartPhones
 @include mediaSm_Hori_SS {
     .menu .nav-item.current > a {
         font-size: 2rem;
